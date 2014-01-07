@@ -19,10 +19,9 @@ namespace TArray
         private void button1_Click(object sender, EventArgs e)
         {
             TArray array = new TArray(6);
-            for (int i = 0; i < 5; ++i)
+            for (int i = 5; i >= 0; --i)
                 array.Insert(i);
-            TArray array2 = new TArray();
-            array.CopyTo(array2,5);
+            array.Sort();
         }
     }
 }

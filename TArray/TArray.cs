@@ -58,7 +58,7 @@ namespace TArray
             }
             ++size;
         }
-        //изменить для зарезервированного размера
+
         public void Insert(int position, Object data)
         {
             if (position == size)
@@ -153,6 +153,29 @@ namespace TArray
                 currElement = currElement.Next;
             }
         }
+
+        public void Sort()
+        {
+            Element currElement;
+            for (int i = 0; i < size - 1; ++i)
+            {
+                currElement = firstElement;
+                for (int j = 0; j < size - 1 - i; ++j)
+                {
+                    if (String.Compare(currElement.Data.ToString(),currElement.Next.Data.ToString()) > 0)                   
+                        Swap(currElement, currElement.Next);
+                    currElement = currElement.Next;
+                }
+            }
+        }
+
+        private void Swap(Element el1,Element el2)
+        {
+            Object temp = el1.Data;
+            el1.Data = el2.Data;
+            el2.Data = temp;
+        }
+
 
         private Element GetElement(int index)
         {
