@@ -1,0 +1,15 @@
+D:\projects c#\TArray\TArray\bin\Debug\TArray.exe
+D:\projects c#\TArray\TArray\bin\Debug\TArray.pdb
+D:\projects c#\TArray\TArray\obj\x86\Debug\TArray.Form1.resources
+D:\projects c#\TArray\TArray\obj\x86\Debug\TArray.Properties.Resources.resources
+D:\projects c#\TArray\TArray\obj\x86\Debug\TArray.csproj.GenerateResource.Cache
+D:\projects c#\TArray\TArray\obj\x86\Debug\TArray.exe
+D:\projects c#\TArray\TArray\obj\x86\Debug\TArray.pdb
+D:\Project c#\TArray\TArray\obj\x86\Debug\TArray.exe
+D:\Project c#\TArray\TArray\obj\x86\Debug\TArray.pdb
+D:\Project c#\TArray\TArray\bin\Debug\TArray.exe
+D:\Project c#\TArray\TArray\bin\Debug\TArray.pdb
+D:\Project c#\TArray\TArray\obj\x86\Debug\TArray.Form1.resources
+D:\Project c#\TArray\TArray\obj\x86\Debug\TArray.Properties.Resources.resources
+D:\Project c#\TArray\TArray\obj\x86\Debug\TArray.csproj.GenerateResource.Cache
+D:\Project c#\TArray\TArray\obj\x86\Debug\TArray.csprojResolveAssemblyReference.cache
