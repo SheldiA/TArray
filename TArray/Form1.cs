@@ -21,7 +21,20 @@ namespace TArray
             TArray array = new TArray(6);
             for (int i = 5; i >= 0; --i)
                 array.Insert(i);
-            array.Sort();
+            foreach (Object o in array)
+                richTextBox1.Text += (o.ToString() + " ");
+            richTextBox1.Text += "\n";
+            array.Sort(new TArray.CompareOp(CompareString));
+            foreach (Object o in array)
+                richTextBox1.Text += (o.ToString() + " ");
+        }
+
+        private bool CompareString(Object el1, Object el2)
+        {
+            bool result = false;
+            if (String.Compare(el1.ToString(), el2.ToString()) > 0)
+                result = true;
+            return result;
         }
     }
 }

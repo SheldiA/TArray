@@ -5,8 +5,10 @@ using System.Text;
 
 namespace TArray
 {
-    class TArray
+    class TArray : System.Collections.IEnumerable
     {
+        public delegate bool CompareOp(Object el1,Object el2);
+
         private int size;
         public int Size
         {
@@ -31,6 +33,16 @@ namespace TArray
                 Insert(null);
             size = 0;
             this.reservedSize = reserved;
+        }
+
+        public System.Collections.IEnumerator GetEnumerator()
+        {
+            Element currentElement = firstElement;
+            while(currentElement != null)
+            {
+                yield return currentElement.Data;
+                currentElement = currentElement.Next;
+            }
         }
 
         public void Insert(Object data)
@@ -154,7 +166,7 @@ namespace TArray
             }
         }
 
-        public void Sort()
+        public void Sort(CompareOp Compare)
         {
             Element currElement;
             for (int i = 0; i < size - 1; ++i)
@@ -162,7 +174,7 @@ namespace TArray
                 currElement = firstElement;
                 for (int j = 0; j < size - 1 - i; ++j)
                 {
-                    if (String.Compare(currElement.Data.ToString(),currElement.Next.Data.ToString()) > 0)                   
+                    if (Compare(currElement.Data,currElement.Next.Data))                   
                         Swap(currElement, currElement.Next);
                     currElement = currElement.Next;
                 }
